@@ -40,7 +40,25 @@ window.scrollTo({
 'top' : sectionPosition
 })
 }
-
+const reorderResponsiveMenu = ()=>{
+  const pageWidth = window.innerWidth;
+  const navigation = document.querySelector("header nav .navigation");
+  const navContainer = document.querySelector("header nav .container")
+  const navigationBody = document.querySelector("body >.navigation");
+  if(pageWidth <= mobileWidth && navigation){
+    document.body.insertAdjacentElement("afterbegin",navigation);
+  }
+  else if(pageWidth > mobileWidth && navigationBody){
+    navContainer.insertAdjacentElement("beforeend" ,navigationBody);
+  }
+}
+const mobileMenueToggle = () =>{
+  const menueToggle = document.querySelector(".nav-toggle");
+  menueToggle.addEventListener("click", () =>{
+  const mobileNavigation = document.querySelector("body >.navigation");
+  mobileNavigation.classList.toggle("navigation-opened");
+  });
+}
 window.addEventListener("scroll", () =>{
 addMenuBackground();
 });
@@ -49,7 +67,8 @@ reorderResponsiveMenu();
 });
 
 
-
+reorderResponsiveMenu();
+mobileMenueToggle();
 onNavItemClick();
 
 //validate registration form
