@@ -207,22 +207,13 @@ footer .logo{
   h1{
       font-size: 50px;
   }
-  .aw-head-text.aw-arrow,
-  .aw-testimonials .aw-arrow {
-    padding: 15px;
-}
-.aw-testimonials .aw-arrow-left {
-    right: 100%;
-  }
-  .aw-testimonials .aw-arrow-right {
-      left: 100%;
-    }
+  
 }
 @media all and (max-width:680px){
   header nav{
     position: absolute;
   }
-  header nav .aw-nav-fixed{
+  header nav .nav-fixed{
     background: none;
   }
   ul.navigation{
@@ -235,7 +226,7 @@ footer .logo{
     -webkit-transition :max-height 1.3s ease;
     transition : max-height 1.3s ease;
   }
-  ul.navigation.aw-navigation-opened{
+  ul.navigation.navigation-opened{
     max-height: 500px;
     -webkit-transition :max-height 1.3s ease;
     transition : max-height 1.3s ease;
